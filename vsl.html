@@ -185,10 +185,26 @@ src="https://www.facebook.com/tr?id=1103592521048958&ev=PageView&noscript=1"
 
       <div class="centralizar" style="margin-top: 20px">
         <a href="https://go.tribopay.com.br/l3zah" style="width: 100%; text-decoration: none">
-          <button>DESBLOQUEAR AGORA</button>
+            <button id="desbloquear" disabled style="background-color: #ccc; color: #666;">ASSISTA PARA DESBLOQUEAR</button>
         </a>
       </div>
     </div>
+
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var botao = document.getElementById("desbloquear");
+    var tempoEspera = 60; // Tempo em segundos
+    
+    function desbloquearBotao() {
+      botao.disabled = false;
+      botao.style.backgroundColor = "#530082";
+      botao.style.color = "white";
+      botao.textContent = "DESBLOQUEAR AGORA";
+    }
+
+    setTimeout(desbloquearBotao, tempoEspera * 1000);
+  });
+</script>
   
 
 </body></html>
